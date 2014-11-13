@@ -19,8 +19,8 @@
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <td><%= post.user_id %></td>
-        <% if !post.visible %>
-          <td><%= link_to 'opublikuj', "/post/publish?id=#{post.id}" %></td>
+        <% if post.visible %>
+          <td><%= link_to 'opublikuj', post_publish_path %></td>
         <% else %>
           <td>widoczny</td>
         <% end %>
